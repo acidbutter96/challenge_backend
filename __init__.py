@@ -1,0 +1,1 @@
+from carteiraglobal.app.request.request_from_site import request_from_site as request
