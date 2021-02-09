@@ -1,11 +1,10 @@
 import json
 import pandas as pd
 from pandas import json_normalize
-from selenium import webdriver
-from BeautifulSoup import BeautifulSoup
 
 class ProcessPandas:
     def __init__(self,path,product='PLANO DE PREVIDÊNCIA'):
+        #add current path to a str
         self.path = path
         self.product = product
 
@@ -18,4 +17,9 @@ class ProcessPandas:
         
 class Scrapper(ProcessPandas):
     def __init__(self,path,product='PLANO DE PREVIDÊNCIA'):
-        self.driver = webdriver.Chrome('./chrome_driver')
+        self.path = path
+        self.product = product
+        super().__init__(self.path,self.product)
+        
+    def find_n_download(self,df):
+        return self.df

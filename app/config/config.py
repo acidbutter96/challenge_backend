@@ -1,14 +1,14 @@
 import os
 
+
 class CreateAndSave:
     def __init__(self):
         self.actualpath = os.getcwd()
     
-    
     def create_dir(self,path):
         self.newdir = self.actualpath+'/'+path
         self.path = path
-        
+        print(self.path)
         try:
             os.mkdir(self.newdir)
         except OSError:
@@ -22,3 +22,6 @@ class CreateAndSave:
         self.file = open(self.path+'/'+filename,mode,encoding='{}'.format(encode))
         self.file.write(text)
         print('file has been saved successfully')
+        
+    def out_to_json(self):
+        return 'u'
